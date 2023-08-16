@@ -1,5 +1,7 @@
 {
   "name": "car_showcase",
+  "author": "Fatima Salem",
+  "description": "A car showcase website built with Next.js and Tailwind CSS.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
