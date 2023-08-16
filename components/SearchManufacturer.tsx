@@ -1,12 +1,13 @@
+'use client'
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import React from "react";
 import { Combobox, Transition } from "@headlessui/react";
 
 import { manufacturers } from "@/constants";
 import { SearchManuFacturerProps } from "@/types";
 
 const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacturerProps) => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = React.useState("");
 
   const filteredManufacturers =
     query === ""
@@ -43,7 +44,7 @@ const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacture
 
           {/* Transition for displaying the options */}
           <Transition
-            as={Fragment} // group multiple elements without introducing an additional DOM node i.e., <></>
+            as={React.Fragment} // group multiple elements without introducing an additional DOM node i.e., <></>
             leave='transition ease-in duration-100'
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
